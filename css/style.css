@@ -1,0 +1,52 @@
+
+/*
+v -- > viewport   h --> height  w --> width
+vh --> Ejemplo 100vh, 1vh parecido a 100%
+vw --> Ejemplo 100vw
+*/
+.my-body{
+  padding: 1em;
+}
+.main-content{
+  padding: 1em;
+  background-color: var(--neutral-3);
+}
+.main-content p {
+  color: var(--neutral-2);
+}
+.main-content::before{
+    content: 'Perfume';
+    display: block;
+    color: var(--neutral-2);
+    text-transform: uppercase;
+    letter-spacing: .4em;
+}
+
+ .title {
+  font-size: 2.4em;
+ }
+
+  img.preview{
+    display: block;
+  }
+
+  .btn{
+    width: 100%;
+    padding: 1em;
+    background-color: var(--primary-1);
+    color: var(--neutral-3);
+    font-weight: 700;
+  }
+  
+  .price strong{
+  
+    vertical-align: middle;
+    margin-right: .5em;
+    font-size: 2.4em;
+    color: var(--primary-1)
+  }
+  
+  .cart {
+    width: initial;
+  }
+
