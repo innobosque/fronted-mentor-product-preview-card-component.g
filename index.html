@@ -23,9 +23,14 @@
 
 
   <div class="container">
+
+    <picture>
+      <!-- La imagen del desktop no aparece hasta que el tamaño sea mínimo de 600px -->
+      <source media="(min-width: 600px)" srcset="./images/image-product-desktop.jpg"><!-- 600x900-->      
+      <img class="preview" src="./images/image-product-mobile.jpg" alt="Preview"><!-- 686x480 -->
+    </picture>
     
     
-    <img class="preview" src="./images/image-product-mobile.jpg" alt="Preview">
    
     <section class="main-content">
    

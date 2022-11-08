@@ -7,4 +7,6 @@
 --neutral-1: hsl(212, 21%, 14%);
 --neutral-2: hsl(228, 12%, 48%);
 --neutral-3: hsl(0, 0%, 100%);
+--border-radius: .5em;
+--margin-content: 1.5rem 0;
 }
