@@ -79,9 +79,10 @@ img.preview__image{
   }
 
   @media screen and (min-width: 600px) {
-    /* .my-body{
-      font-size: calc(1em + 1vw);
-    } */
+    .my-body,.title {
+      font-size: calc(1.2em + 1vw);
+      line-height: calc(1.4em + 1vw);
+    }
     .container{
       display: flex;
     }
@@ -95,9 +96,19 @@ img.preview__image{
       border-top-right-radius: 0;
     }
     .main-content{
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
       flex: 50;
       border-top-right-radius: var(--border-radius);
       border-bottom-left-radius: 0;
+    }
+    .btn {
+      font-size: calc(.1em + 1vw);
+      letter-spacing: .2em;
+    }
+    .cart {
+      height: calc(.5em + 1vw);
     }
   }
 
