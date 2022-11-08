@@ -4,11 +4,20 @@ v -- > viewport   h --> height  w --> width
 vh --> Ejemplo 100vh, 1vh parecido a 100%
 vw --> Ejemplo 100vw
 */
+
 .my-body{
   padding: 1em;
 }
 
-img.preview{
+.container {
+  
+  min-width: var(--max-width-mobile);
+  max-width: var(--max-width-desktop);
+}
+
+
+
+img.preview__image{
   display: block;
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
@@ -67,5 +76,28 @@ img.preview{
   
   .cart {
     width: initial;
+  }
+
+  @media screen and (min-width: 600px) {
+    /* .my-body{
+      font-size: calc(1em + 1vw);
+    } */
+    .container{
+      display: flex;
+    }
+    .main-content,.preview{
+      flex: 50%;
+    }
+    img.preview__image{
+      height: 100%;
+      object-fit: cover;
+      border-bottom-left-radius: var(--border-radius);
+      border-top-right-radius: 0;
+    }
+    .main-content{
+      flex: 50;
+      border-top-right-radius: var(--border-radius);
+      border-bottom-left-radius: 0;
+    }
   }
 
