@@ -6,19 +6,33 @@ vw --> Ejemplo 100vw
 */
 
 .my-body{
-  padding: 1em;
+  --padding-body: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: var(--padding-body);
 }
 
-.container {
-  
+.container { 
+  display: flex;
+  flex-wrap: wrap;
   min-width: var(--max-width-mobile);
   max-width: var(--max-width-desktop);
+}
+
+.container > * {
+  flex-basis: calc(300px - (var(--padding-body)*2));/*Mitad del ancho de columna menos el 1em del body */
+  max-width: 600px;
+  flex-grow: 1;
 }
 
 
 
 img.preview__image{
   display: block;
+  height: 100%;
+  object-fit: cover;
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
 }
@@ -78,20 +92,11 @@ img.preview__image{
     width: initial;
   }
 
-  @media screen and (min-width: 600px) {
-    .my-body,.title {
-      font-size: calc(1.2em + 1vw);
-      line-height: calc(1.4em + 1vw);
-    }
-    .container{
-      display: flex;
-    }
-    .main-content,.preview{
-      flex: 50%;
+  @media screen and (min-width: 601px) {
+    .my-body{
+      font-size: clamp(1em, 2vw, 2em);
     }
     img.preview__image{
-      height: 100%;
-      object-fit: cover;
       border-bottom-left-radius: var(--border-radius);
       border-top-right-radius: 0;
     }
@@ -99,16 +104,8 @@ img.preview__image{
       display: flex;
       justify-content: space-around;
       flex-direction: column;
-      flex: 50;
       border-top-right-radius: var(--border-radius);
       border-bottom-left-radius: 0;
-    }
-    .btn {
-      font-size: calc(.1em + 1vw);
-      letter-spacing: .2em;
-    }
-    .cart {
-      height: calc(.5em + 1vw);
     }
   }
 

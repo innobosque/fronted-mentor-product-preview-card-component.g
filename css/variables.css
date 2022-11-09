@@ -1,5 +1,5 @@
-:root {
-  
+:root {  
+font-size: 14px;
 --max-width-desktop: 1440px;
 --max-width-mobile: 375px;
 --primary-1: hsl(158, 36%, 37%);

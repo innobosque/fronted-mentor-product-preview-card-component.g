@@ -6,16 +6,18 @@
     box-sizing: border-box;
 }
 
-html{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+html {
     font-size: 14px;
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%;
 }
 
 body{
     margin: 0;
-    background-color: var(--primary-2);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
     font-size: 1em;
+    background-color: var(--primary-2);
 }
 
 h1,
